@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <launch>
   <arg name="model" />
   <arg name="gui" default="False" />
@@ -14,8 +15,10 @@
     <arg name="io_module" value="$(arg io_module)" />
   </include>
 
+  <!-- Start RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find up1_viz)/rviz/urdf.rviz" />
+
+  <!-- Start joint state publisher -->
   <param name="use_gui" value="$(arg gui)" />
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find up1_viz)/rviz/urdf.rviz" />
 </launch>
