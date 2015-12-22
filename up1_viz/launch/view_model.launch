@@ -3,17 +3,8 @@
   <arg name="model" />
   <arg name="gui" default="False" />
 
-  <!-- Robot config -->
-  <arg name="base_module" default="base" />
-  <arg name="manipulator_module" default="dual_arm" />
-  <arg name="io_module" default="io" />
-
   <!-- Robot description -->
-  <include file="$(find up1_description)/launch/description.launch">
-    <arg name="base_module" value="$(arg base_module)" />
-    <arg name="manipulator_module" value="$(arg manipulator_module)" />
-    <arg name="io_module" value="$(arg io_module)" />
-  </include>
+  <include file="$(find up1_description)/launch/description.launch" />
 
   <!-- Start RViz -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find up1_viz)/rviz/urdf.rviz" />
