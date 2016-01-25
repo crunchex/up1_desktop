@@ -1,6 +1,6 @@
 # up1_desktop #
 
-Desktop ROS packages for the UpDroid UP1, which may pull in graphical dependencies.
+Desktop ROS packages for the UpDroid UP1, which may pull in graphical dependencies. The contents of this metapackage is software that must be run on a desktop PC, with or without a connected simulated/physical robot.
 
 # Packages #
 
