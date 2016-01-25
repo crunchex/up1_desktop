@@ -12,4 +12,8 @@
   <!-- Start joint state publisher -->
   <param name="use_gui" value="$(arg gui)" />
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- Given the published joint states, publish tf for the robot links -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="true" output="screen" />
+
 </launch>
